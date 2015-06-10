@@ -38,22 +38,10 @@ function stanford_bean_types_strongarm() {
     'extra_fields' => array(
       'form' => array(
         'title' => array(
-          'weight' => '1',
+          'weight' => '-5',
         ),
         'metatags' => array(
           'weight' => '40',
-        ),
-        'label' => array(
-          'weight' => '0',
-        ),
-        'revision' => array(
-          'weight' => '4',
-        ),
-        'view_mode' => array(
-          'weight' => '3',
-        ),
-        'redirect' => array(
-          'weight' => '5',
         ),
       ),
       'display' => array(
@@ -75,7 +63,7 @@ function stanford_bean_types_strongarm() {
   $strongarm->value = array(
     'view_modes' => array(
       'default' => array(
-        'custom_settings' => FALSE,
+        'custom_settings' => TRUE,
       ),
       'diff_standard' => array(
         'custom_settings' => FALSE,
@@ -107,6 +95,15 @@ function stanford_bean_types_strongarm() {
       'stanford_3_col_header' => array(
         'custom_settings' => TRUE,
       ),
+      'stanford_callout_block' => array(
+        'custom_settings' => TRUE,
+      ),
+      'stanford_tiles' => array(
+        'custom_settings' => TRUE,
+      ),
+      'large_landscape' => array(
+        'custom_settings' => FALSE,
+      ),
     ),
     'extra_fields' => array(
       'form' => array(
@@ -116,12 +113,24 @@ function stanford_bean_types_strongarm() {
         'metatags' => array(
           'weight' => '40',
         ),
+        'label' => array(
+          'weight' => '-10',
+        ),
+        'revision' => array(
+          'weight' => '10',
+        ),
+        'view_mode' => array(
+          'weight' => '10',
+        ),
+        'redirect' => array(
+          'weight' => '30',
+        ),
       ),
       'display' => array(
         'title' => array(
           'default' => array(
-            'weight' => '0',
-            'visible' => TRUE,
+            'weight' => '6',
+            'visible' => FALSE,
           ),
           'stanford_6_col_photo_landscape' => array(
             'weight' => '0',
@@ -134,6 +143,14 @@ function stanford_bean_types_strongarm() {
           'stanford_3_col_header' => array(
             'weight' => '0',
             'visible' => TRUE,
+          ),
+          'stanford_callout_block' => array(
+            'weight' => '1',
+            'visible' => FALSE,
+          ),
+          'stanford_tiles' => array(
+            'weight' => '1',
+            'visible' => FALSE,
           ),
         ),
       ),

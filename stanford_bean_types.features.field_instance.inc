@@ -82,7 +82,7 @@ function stanford_bean_types_field_default_field_instances() {
       'module' => 'field_collection',
       'settings' => array(),
       'type' => 'field_collection_embed',
-      'weight' => 2,
+      'weight' => 42,
     ),
   );
 
@@ -226,6 +226,7 @@ function stanford_bean_types_field_default_field_instances() {
     'label' => 'More link',
     'required' => 0,
     'settings' => array(
+      'absolute_url' => 1,
       'attributes' => array(
         'class' => '',
         'configurable_title' => 0,
@@ -239,6 +240,7 @@ function stanford_bean_types_field_default_field_instances() {
       'enable_tokens' => 1,
       'rel_remove' => 'default',
       'title' => 'optional',
+      'title_label_use_field_label' => FALSE,
       'title_maxlength' => 128,
       'title_value' => '',
       'url' => 0,
@@ -559,6 +561,7 @@ function stanford_bean_types_field_default_field_instances() {
     'label' => 'Link',
     'required' => 0,
     'settings' => array(
+      'absolute_url' => 1,
       'attributes' => array(
         'class' => '',
         'configurable_title' => 0,
@@ -571,6 +574,7 @@ function stanford_bean_types_field_default_field_instances() {
       ),
       'enable_tokens' => 1,
       'title' => 'optional',
+      'title_label_use_field_label' => FALSE,
       'title_maxlength' => 128,
       'title_value' => '',
       'url' => 0,
@@ -670,6 +674,7 @@ function stanford_bean_types_field_default_field_instances() {
     'label' => 'Read More Link',
     'required' => 0,
     'settings' => array(
+      'absolute_url' => 1,
       'attributes' => array(
         'class' => 'more-link',
         'configurable_title' => 0,
@@ -682,6 +687,7 @@ function stanford_bean_types_field_default_field_instances() {
       ),
       'enable_tokens' => 1,
       'title' => 'required',
+      'title_label_use_field_label' => FALSE,
       'title_maxlength' => 128,
       'title_value' => '',
       'url' => 0,
@@ -853,7 +859,7 @@ function stanford_bean_types_field_default_field_instances() {
     'label' => 'Image Insert',
     'required' => 0,
     'settings' => array(
-      'alt_field' => 0,
+      'alt_field' => 1,
       'default_image' => 0,
       'file_directory' => '',
       'file_extensions' => 'png gif jpg jpeg',
@@ -868,26 +874,41 @@ function stanford_bean_types_field_default_field_instances() {
       'module' => 'image',
       'settings' => array(
         'insert' => 1,
-        'insert_absolute' => FALSE,
+        'insert_absolute' => 0,
         'insert_class' => '',
         'insert_default' => 'image_large-square',
         'insert_styles' => array(
           'auto' => 'auto',
+          'icon_link' => 0,
           'image' => 'image',
           'image_3-col-header' => 0,
-          'image_3-col-well-header' => 0,
-          'image_3-col-well-profile' => 0,
           'image_4-col-header' => 0,
           'image_6-col-banner' => 0,
-          'image_6-col-header' => 0,
-          'image_6-col-header-short' => 0,
+          'image_6-col-banner-short' => 0,
+          'image_6-col-banner-tall' => 0,
+          'image_6-col-photo-landscape' => 0,
           'image_8-col-banner' => 0,
+          'image_8-col-banner-short' => 0,
+          'image_8-col-banner-tall' => 0,
           'image_9-col-banner' => 0,
+          'image_9-col-banner-short' => 0,
           'image_12-col-banner' => 0,
-          'image_icon' => 0,
+          'image_12-col-banner-tall' => 0,
+          'image_caw-6-col-banner' => 0,
+          'image_caw-9-col-banner-tall' => 0,
+          'image_caw-banner' => 0,
+          'image_caw-carousel' => 0,
+          'image_caw-landscape-xlarge' => 0,
+          'image_caw-large-landscape' => 0,
+          'image_caw-med-landscape' => 0,
+          'image_caw-sm-landscape' => 0,
+          'image_icon-profile' => 0,
+          'image_icon-square' => 0,
           'image_large' => 0,
           'image_large-landscape' => 0,
+          'image_large-landscape-scaled' => 0,
           'image_large-profile' => 0,
+          'image_large-profile-scaled' => 0,
           'image_large-scaled' => 'image_large-scaled',
           'image_large-square' => 'image_large-square',
           'image_med-landscape' => 0,
@@ -896,8 +917,11 @@ function stanford_bean_types_field_default_field_instances() {
           'image_med-profile-scaled' => 0,
           'image_med-square' => 'image_med-square',
           'image_medium' => 0,
+          'image_page-width' => 'image_page-width',
           'image_sm-landscape' => 0,
+          'image_sm-profile' => 0,
           'image_sm-square' => 'image_sm-square',
+          'image_sweetener_-_card' => 0,
           'image_thmb-landscape' => 0,
           'image_thmb-profile' => 0,
           'image_thmb-square' => 0,
@@ -928,10 +952,10 @@ function stanford_bean_types_field_default_field_instances() {
           'delete' => '',
           'description' => 0,
           'edit' => '',
-          'view_mode' => 'stanford_4_col_header',
+          'view_mode' => 'stanford_block',
         ),
         'type' => 'field_collection_view',
-        'weight' => 7,
+        'weight' => 1,
       ),
       'stanford_3_col_header' => array(
         'label' => 'hidden',
@@ -972,6 +996,25 @@ function stanford_bean_types_field_default_field_instances() {
         'type' => 'field_collection_view',
         'weight' => 5,
       ),
+      'stanford_callout_block' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 6,
+      ),
+      'stanford_tiles' => array(
+        'label' => 'hidden',
+        'module' => 'field_collection',
+        'settings' => array(
+          'add' => '',
+          'delete' => '',
+          'description' => 0,
+          'edit' => '',
+          'view_mode' => 'stanford_tiles',
+        ),
+        'type' => 'field_collection_view',
+        'weight' => 6,
+      ),
     ),
     'entity_type' => 'bean',
     'field_name' => 'field_s_image_info',
@@ -1001,7 +1044,7 @@ function stanford_bean_types_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 3,
+        'weight' => 1,
       ),
       'stanford_3_col_header' => array(
         'label' => 'hidden',
@@ -1023,6 +1066,20 @@ function stanford_bean_types_field_default_field_instances() {
         'settings' => array(),
         'type' => 'text_default',
         'weight' => 2,
+      ),
+      'stanford_callout_block' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 3,
+      ),
+      'stanford_tiles' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 8,
       ),
     ),
     'entity_type' => 'bean',
@@ -1057,7 +1114,7 @@ function stanford_bean_types_field_default_field_instances() {
         'module' => 'file',
         'settings' => array(),
         'type' => 'file_default',
-        'weight' => 4,
+        'weight' => 2,
       ),
       'stanford_3_col_header' => array(
         'label' => 'hidden',
@@ -1080,12 +1137,24 @@ function stanford_bean_types_field_default_field_instances() {
         'type' => 'file_default',
         'weight' => 3,
       ),
+      'stanford_callout_block' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 5,
+      ),
       'stanford_med_profile' => array(
         'label' => 'hidden',
         'module' => 'file',
         'settings' => array(),
         'type' => 'file_default',
         'weight' => 5,
+      ),
+      'stanford_tiles' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 7,
       ),
       'test' => array(
         'label' => 'hidden',
@@ -1166,7 +1235,7 @@ function stanford_bean_types_field_default_field_instances() {
         'module' => 'link',
         'settings' => array(),
         'type' => 'link_default',
-        'weight' => 5,
+        'weight' => 3,
       ),
       'stanford_3_col_header' => array(
         'label' => 'hidden',
@@ -1189,12 +1258,25 @@ function stanford_bean_types_field_default_field_instances() {
         'type' => 'link_default',
         'weight' => 4,
       ),
+      'stanford_callout_block' => array(
+        'label' => 'hidden',
+        'module' => 'link',
+        'settings' => array(),
+        'type' => 'link_default',
+        'weight' => 2,
+      ),
       'stanford_med_profile' => array(
         'label' => 'hidden',
         'module' => 'link',
         'settings' => array(),
         'type' => 'link_default',
         'weight' => 6,
+      ),
+      'stanford_tiles' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 9,
       ),
       'test' => array(
         'label' => 'hidden',
@@ -1209,6 +1291,7 @@ function stanford_bean_types_field_default_field_instances() {
     'label' => 'Read More Link',
     'required' => 0,
     'settings' => array(
+      'absolute_url' => 1,
       'attributes' => array(
         'class' => 'more-link',
         'configurable_title' => 0,
@@ -1221,6 +1304,7 @@ function stanford_bean_types_field_default_field_instances() {
       ),
       'enable_tokens' => 1,
       'title' => 'required',
+      'title_label_use_field_label' => FALSE,
       'title_maxlength' => 128,
       'title_value' => '',
       'url' => 0,
@@ -1261,6 +1345,7 @@ function stanford_bean_types_field_default_field_instances() {
     'label' => 'Facebook',
     'required' => 0,
     'settings' => array(
+      'absolute_url' => 1,
       'attributes' => array(
         'class' => '',
         'configurable_title' => 0,
@@ -1273,6 +1358,7 @@ function stanford_bean_types_field_default_field_instances() {
       ),
       'enable_tokens' => 1,
       'title' => 'value',
+      'title_label_use_field_label' => FALSE,
       'title_maxlength' => 128,
       'title_value' => 'Facebook',
       'url' => 0,
@@ -1312,6 +1398,7 @@ function stanford_bean_types_field_default_field_instances() {
     'label' => 'Flickr',
     'required' => 0,
     'settings' => array(
+      'absolute_url' => 1,
       'attributes' => array(
         'class' => '',
         'configurable_title' => 0,
@@ -1324,6 +1411,7 @@ function stanford_bean_types_field_default_field_instances() {
       ),
       'enable_tokens' => 1,
       'title' => 'value',
+      'title_label_use_field_label' => FALSE,
       'title_maxlength' => 128,
       'title_value' => 'Flickr',
       'url' => 0,
@@ -1363,6 +1451,7 @@ function stanford_bean_types_field_default_field_instances() {
     'label' => 'GooglePlus',
     'required' => 0,
     'settings' => array(
+      'absolute_url' => 1,
       'attributes' => array(
         'class' => '',
         'configurable_title' => 0,
@@ -1375,6 +1464,7 @@ function stanford_bean_types_field_default_field_instances() {
       ),
       'enable_tokens' => 1,
       'title' => 'value',
+      'title_label_use_field_label' => FALSE,
       'title_maxlength' => 128,
       'title_value' => 'GooglePlus',
       'url' => 0,
@@ -1414,6 +1504,7 @@ function stanford_bean_types_field_default_field_instances() {
     'label' => 'Instagram',
     'required' => 0,
     'settings' => array(
+      'absolute_url' => 1,
       'attributes' => array(
         'class' => '',
         'configurable_title' => 0,
@@ -1426,6 +1517,7 @@ function stanford_bean_types_field_default_field_instances() {
       ),
       'enable_tokens' => 1,
       'title' => 'value',
+      'title_label_use_field_label' => FALSE,
       'title_maxlength' => 128,
       'title_value' => 'Instagram',
       'url' => 0,
@@ -1465,6 +1557,7 @@ function stanford_bean_types_field_default_field_instances() {
     'label' => 'LinkedIn',
     'required' => 0,
     'settings' => array(
+      'absolute_url' => 1,
       'attributes' => array(
         'class' => '',
         'configurable_title' => 0,
@@ -1477,6 +1570,7 @@ function stanford_bean_types_field_default_field_instances() {
       ),
       'enable_tokens' => 1,
       'title' => 'value',
+      'title_label_use_field_label' => FALSE,
       'title_maxlength' => 128,
       'title_value' => 'LinkedIn',
       'url' => 0,
@@ -1516,6 +1610,7 @@ function stanford_bean_types_field_default_field_instances() {
     'label' => 'Pinterest',
     'required' => 0,
     'settings' => array(
+      'absolute_url' => 1,
       'attributes' => array(
         'class' => '',
         'configurable_title' => 0,
@@ -1528,6 +1623,7 @@ function stanford_bean_types_field_default_field_instances() {
       ),
       'enable_tokens' => 1,
       'title' => 'value',
+      'title_label_use_field_label' => FALSE,
       'title_maxlength' => 128,
       'title_value' => 'Pinterest',
       'url' => 0,
@@ -1567,6 +1663,7 @@ function stanford_bean_types_field_default_field_instances() {
     'label' => 'Tumblr',
     'required' => 0,
     'settings' => array(
+      'absolute_url' => 1,
       'attributes' => array(
         'class' => '',
         'configurable_title' => 0,
@@ -1579,6 +1676,7 @@ function stanford_bean_types_field_default_field_instances() {
       ),
       'enable_tokens' => 1,
       'title' => 'value',
+      'title_label_use_field_label' => FALSE,
       'title_maxlength' => 128,
       'title_value' => 'Tumblr',
       'url' => 0,
@@ -1618,6 +1716,7 @@ function stanford_bean_types_field_default_field_instances() {
     'label' => 'Twitter',
     'required' => 0,
     'settings' => array(
+      'absolute_url' => 1,
       'attributes' => array(
         'class' => '',
         'configurable_title' => 0,
@@ -1630,6 +1729,7 @@ function stanford_bean_types_field_default_field_instances() {
       ),
       'enable_tokens' => 1,
       'title' => 'value',
+      'title_label_use_field_label' => FALSE,
       'title_maxlength' => 128,
       'title_value' => 'Twitter',
       'url' => 0,
@@ -1669,6 +1769,7 @@ function stanford_bean_types_field_default_field_instances() {
     'label' => 'Vimeo',
     'required' => 0,
     'settings' => array(
+      'absolute_url' => 1,
       'attributes' => array(
         'class' => '',
         'configurable_title' => 0,
@@ -1681,6 +1782,7 @@ function stanford_bean_types_field_default_field_instances() {
       ),
       'enable_tokens' => 1,
       'title' => 'value',
+      'title_label_use_field_label' => FALSE,
       'title_maxlength' => 128,
       'title_value' => 'Vimeo',
       'url' => 0,
@@ -1720,6 +1822,7 @@ function stanford_bean_types_field_default_field_instances() {
     'label' => 'YouTube',
     'required' => 0,
     'settings' => array(
+      'absolute_url' => 1,
       'attributes' => array(
         'class' => '',
         'configurable_title' => 0,
@@ -1732,6 +1835,7 @@ function stanford_bean_types_field_default_field_instances() {
       ),
       'enable_tokens' => 1,
       'title' => 'value',
+      'title_label_use_field_label' => FALSE,
       'title_maxlength' => 128,
       'title_value' => 'YouTube',
       'url' => 0,
@@ -1924,6 +2028,7 @@ function stanford_bean_types_field_default_field_instances() {
     'label' => 'More link',
     'required' => 0,
     'settings' => array(
+      'absolute_url' => 1,
       'attributes' => array(
         'class' => '',
         'configurable_title' => 0,
@@ -1937,6 +2042,7 @@ function stanford_bean_types_field_default_field_instances() {
       'enable_tokens' => 1,
       'rel_remove' => 'default',
       'title' => 'optional',
+      'title_label_use_field_label' => FALSE,
       'title_maxlength' => 128,
       'title_value' => '',
       'url' => 0,
