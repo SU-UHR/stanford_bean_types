@@ -11,7 +11,7 @@ dependencies[] = image
 dependencies[] = link
 dependencies[] = list
 dependencies[] = options
-dependencies[] = stanford_field_formatters
+dependencies[] = stanford_field_formatters (>=7.x-1.3)
 dependencies[] = strongarm
 dependencies[] = text
 explanation = Field type(s) in use - see <a href="/admin/reports/fields">Field list</a>
