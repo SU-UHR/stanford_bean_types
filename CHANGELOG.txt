@@ -1,6 +1,10 @@
 Stanford Bean Types x.x-x.x xxxx-xx-xx
 --------------------------------------
 
+7.x-2.5-caw                        2018-07-31
+---------------------------------------------
+- Adding stanford_icon_grid from SU-SWS
+
 7.x-2.4-caw                        2015-09-16
 ---------------------------------------------
 - CAW specific fork starting point.
